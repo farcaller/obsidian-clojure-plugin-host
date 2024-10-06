@@ -1,0 +1,5 @@
+{:deps true
+ :builds {:clojure-plugin-host
+          {:target :node-library
+           :output-to "target/main.cljs.js"
+           :exports-var clojure-plugin-host.core/ObsidianClojure}}}

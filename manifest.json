@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"id": "clojure-plugin-host",
+	"name": "Clojure Plugin Host",
+	"version": "0.1.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "A clojure plugin host, allowing the creation of simple clojure-based plugins right inside the editor.",
+	"author": "Vladimir \"farcaller\" Pouzanov",
+	"authorUrl": "https://farcaller.net",
 	"isDesktopOnly": false
 }

@@ -1,0 +1,13 @@
+{:tasks {:requires ([babashka.fs :as fs])
+         
+         build-cljs {:doc "Compiles the clojure code into javascript"
+                     :task (shell "./node_modules/.bin/shadow-cljs release clojure-plugin-host")}
+         build-js {:doc "Minifies the cljs-produced javascript to what Obsidian expects"
+                   :depends [build-cljs]
+                   :task (shell "node esbuild.config.mjs production")}
+         deploy-dev {:dev "Deploys the plugin to the local Obsidian vault"
+                     :depends [build-js]
+                     :task (let [deploy-path (System/getenv "OBSIDIAN_DEPLOY_PATH")]
+                             (when-not deploy-path (throw (Exception. "OBSIDIAN_DEPLOY_PATH not set")))
+                             (fs/copy "manifest.json" deploy-path {:replace-existing true})
+                             (fs/copy "target/main.js" deploy-path {:replace-existing true}))}}}
