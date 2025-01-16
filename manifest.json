@@ -3,7 +3,7 @@
 	"name": "Clojure Plugin Host",
 	"version": "0.1.0",
 	"minAppVersion": "0.15.0",
-	"description": "A clojure plugin host, allowing the creation of simple clojure-based plugins right inside the editor.",
+	"description": "A Clojure plugin host, allowing the creation of simple Clojure-based plugins right inside the editor.",
 	"author": "Vladimir \"farcaller\" Pouzanov",
 	"authorUrl": "https://farcaller.net",
 	"isDesktopOnly": false
